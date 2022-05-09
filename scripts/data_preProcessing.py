@@ -6,19 +6,27 @@ class data_preProcessing_script:
 
     def __init__(self, df: pd.DataFrame) -> None:
         self.df = df
+        
 ################################################################################################
 #  Data cleaning script
 ################################################################################################
 
     def drop_duplicates(self) -> pd.DataFrame:
-        removables = self.df[self.df.duplicated()].index
-        return self.df.drop(index=removables, inplace=True)
+        droped = self.df[self.df.duplicated()].index
+        return self.df.drop(index=droped, inplace=True)
 
     def convert_to_numbers(self) -> pd.DataFrame:
         self.df = self.df.apply(pd.to_numeric, errors='coerce')
         return self.df
 
-
+    def convertByteMB(self, coll) -> pd.DataFrame:
+        for col in coll:
+            self.df[col] = self.df[col] / 1*10e+5
+            self.df.rename(
+                columns={col: f'{col[:-7]}(MegaBytes)'}, inplace=True)
+        print('Byte to MB change error')
+        return self.df
+        
 ################################################################################################
 #  Data Information script
 ################################################################################################
