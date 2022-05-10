@@ -82,5 +82,5 @@ class data_preProcessing_script:
         return missing_df
 
 ################################################################################################
-#  Visualization script
+#  Visualization and Exploration script
 ################################################################################################
