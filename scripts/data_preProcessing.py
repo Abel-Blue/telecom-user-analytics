@@ -58,7 +58,6 @@ class data_preProcessing_script:
 #  Missing Data manipulation script
 ################################################################################################
 
-
     def colums_WithMissingValue(self):
         miss = []
         dff = self.df.isnull().any()
@@ -85,17 +84,3 @@ class data_preProcessing_script:
 ################################################################################################
 #  Visualization script
 ################################################################################################
-
-
-################################################################################################
-#  Saving data
-################################################################################################
-
-def save_clean_data(self, name: str):
-
-    try:
-        self.df.to_csv(name)
-        print('data saved!!')
-
-    except:
-        print("Failed to save data")
