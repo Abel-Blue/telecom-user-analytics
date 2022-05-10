@@ -80,7 +80,52 @@ class exploration:
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
+    def plot_bar(df: pd.DataFrame, x_col: str, y_col: str, title: str, xlabel: str, ylabel: str) -> None:
+        '''
+        # bar: Plot a bar chart.
+        # df: dataframe to be plotted
+        # x_col: x-axis column
+        # y_col: y-axis column
+        # title: Title of the plot
+        # xlabel: x-axis label
+        # ylabel: y-axis label
+        '''
+        plt.figure(figsize=(12, 7))
+        sns.barplot(data=df, x=x_col, y=y_col)
+        plt.title(title, size=20)
+        plt.xticks(rotation=75, fontsize=14)
+        plt.yticks(fontsize=14)
+        plt.xlabel(xlabel, fontsize=16)
+        plt.ylabel(ylabel, fontsize=16)
+        plt.show()
 
+    def plot_box(df: pd.DataFrame, x_col: str, title: str) -> None:
+        '''
+        # box: Plot a box plot.
+        # df: dataframe to be plotted
+        # x_col: x-axis column
+        # title: Title of the plot
+        '''
+        plt.figure(figsize=(12, 7))
+        sns.boxplot(data=df, x=x_col)
+        plt.title(title, size=20)
+        plt.xticks(rotation=75, fontsize=14)
+        plt.show()
+
+    def plot_box_multi(df: pd.DataFrame, x_col: str, y_col: str, title: str) -> None:
+        '''
+        # box_multi: Plot a box plot.
+        # df: dataframe to be plotted
+        # x_col: x-axis column
+        # y_col: y-axis column
+        # title: Title of the plot
+        '''
+        plt.figure(figsize=(12, 7))
+        sns.boxplot(data=df, x=x_col, y=y_col)
+        plt.title(title, size=20)
+        plt.xticks(rotation=75, fontsize=14)
+        plt.yticks(fontsize=14)
+        plt.show()
 
 
 
