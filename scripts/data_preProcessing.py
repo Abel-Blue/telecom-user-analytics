@@ -58,6 +58,7 @@ class data_preProcessing_script:
 #  Missing Data manipulation script
 ################################################################################################
 
+
     def colums_WithMissingValue(self):
         miss = []
         dff = self.df.isnull().any()
@@ -80,7 +81,3 @@ class data_preProcessing_script:
         missing_df = pd.DataFrame(col_null, columns=['total_missing_values'])
         missing_df['missing_percentage'] = missing_percentage
         return missing_df
-
-################################################################################################
-#  Visualization and Exploration script
-################################################################################################
