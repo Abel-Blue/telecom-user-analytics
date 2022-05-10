@@ -1,6 +1,4 @@
 
-
-from data_preProcessing import data_preProcessing_script
 import pandas as pd
 import numpy as np
 import unittest
@@ -10,6 +8,7 @@ import sys
 sys.path.insert(0, '../scripts/')
 sys.path.append(os.path.abspath(os.path.join('scripts')))
 
+from data_preProcessing import data_preProcessing_script
 
 df = pd.DataFrame({'numbers': [2, 4, 6, 7, 9], 'letters': ['a', 'b', 'c', 'd', 'e'],
                    'floats': [0.2323, -0.23123, np.NaN, np.NaN, 4.3434]})
