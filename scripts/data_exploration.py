@@ -34,7 +34,7 @@ class exploration:
         title: Title of the plot
         correlation: correlation matrix
         '''
-        plt.figure(figsize=(19, 15))
+        plt.figure(figsize=(14, 9))
         sns.heatmap(correlation)
         plt.title(title, size=18, fontweight='bold')
         plt.show()
