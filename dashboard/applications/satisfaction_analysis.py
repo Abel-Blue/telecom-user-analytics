@@ -14,11 +14,11 @@ def app():
 
     st.header("Top 10 Satisfied Customers")
     st.dataframe(df_satisf)
-    st.bar_chart(df_satisf.value_counts())
+    st.bar_chart(df_satisf['satisfaction_score'])
 
     st.subheader("Score Table")
     st.dataframe(df_score)
-    st.bar_chart(df_score.value_counts())
+    st.bar_chart(df_score['satisfaction_score'])
 
     st.header("User Clustering based on both scores")
     st.image('data/satisfaction.png')

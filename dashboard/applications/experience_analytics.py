@@ -19,28 +19,28 @@ def app():
     st.header("Top 10 Users Experience metrics")
     st.subheader("Average Throughput")
     st.dataframe(df_avgThr)
-    st.bar_chart(df_avgThr.value_counts())
+    st.bar_chart(df_avgThr['Average throughput'])
 
     st.subheader("Round Trip Time")
     st.dataframe(df_rtt)
-    st.bar_chart(df_rtt.value_counts())
+    st.bar_chart(df_rtt['Average RTT'])
 
     st.subheader("TCP")
     st.dataframe(df_tcp)
-    st.bar_chart(df_tcp.value_counts())
+    st.bar_chart(df_tcp['Average TCP'])
 
     st.header("Most Frequenct Users")
     st.subheader('frquent Average Throughput')
     st.dataframe(df_frqThr)
-    st.bar_chart(df_frqThr.value_counts())
+    st.bar_chart(df_frqThr['0'])
 
     st.subheader("frquent Round Trip Time")
     st.dataframe(df_frqrtt)
-    st.bar_chart(df_frqrtt.value_counts())
+    st.bar_chart(df_frqrtt['0'])
 
     st.subheader("frquent TCP")
     st.dataframe(df_frqtcp)
-    st.bar_chart(df_frqtcp.value_counts())
+    st.bar_chart(df_frqtcp['0'])
 
     st.header("Cluster with 2 group classification")
     st.image('data/clusterExp.png')

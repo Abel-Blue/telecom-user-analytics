@@ -22,42 +22,42 @@ def app():
     st.header("Top 10 Users Engaged Per Each Application")
     st.subheader("Email App")
     st.dataframe(df_email)
-    st.bar_chart(df_email.value_counts())
+    st.bar_chart(df_email.Email_Total_Data)
 
     st.subheader("Game App")
     st.dataframe(df_game)
-    st.bar_chart(df_game.value_counts())
+    st.bar_chart(df_game.Gaming_Total_Data)
 
     st.subheader("Google App")
     st.dataframe(df_google)
-    st.bar_chart(df_google.value_counts())
+    st.bar_chart(df_google.Google_Total_Data)
 
     st.subheader("Netflix App")
     st.dataframe(df_netflix)
-    st.bar_chart(df_netflix.value_counts())
+    st.bar_chart(df_netflix.Netflix_Total_Data)
 
     st.subheader("Other App")
     st.dataframe(df_otherAct)
-    st.bar_chart(df_otherAct.value_counts())
+    st.bar_chart(df_otherAct.Other_Total_Data)
 
     st.subheader("Social Media App")
     st.dataframe(df_social)
-    st.bar_chart(df_social.value_counts())
+    st.bar_chart(df_social.Social_Media_Total_Data)
 
     st.subheader("Youtube App")
     st.dataframe(df_youtube)
-    st.bar_chart(df_youtube.value_counts())
+    st.bar_chart(df_youtube.Youtube_Total_Data)
 
     st.header("Top 3 Most Used Applications")
     st.image('data/top10apps.png')
 
     st.subheader("Top 10 users based on session count")
     st.dataframe(df_session)
-    st.bar_chart(df_session.value_counts())
+    st.bar_chart(df_session['Dur. (ms)'])
 
     st.subheader("Top 10 users based on download and upload count")
     st.dataframe(df_DLUL)
-    st.bar_chart(df_DLUL.value_counts())
+    st.bar_chart(df_DLUL['Total UL and DL'])
 
     st.header("3 groups k-means clustering")
     st.image('data/engclusters.png')
