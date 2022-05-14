@@ -9,7 +9,7 @@ def app():
     st.title("User Engagement Analysis")
 
     st.header("Data Visualization")
-    df_email = pd.read_csv('data/top10_email_users.csv.csv')
+    df_email = pd.read_csv('data/top10_email_users.csv')
     df_game = pd.read_csv('data/top10_gameApp_users.csv')
     df_google = pd.read_csv('data/top10_google_users.csv')
     df_netflix = pd.read_csv('data/top10_netflix_users.csv')
@@ -56,8 +56,8 @@ def app():
     st.bar_chart(df_session.value_counts())
 
     st.subheader("Top 10 users based on download and upload count")
-    st.dataframe(df_session)
-    st.bar_chart(df_session.value_counts())
+    st.dataframe(df_DLUL)
+    st.bar_chart(df_DLUL.value_counts())
 
     st.header("3 groups k-means clustering")
     st.image('data/engclusters.png')
