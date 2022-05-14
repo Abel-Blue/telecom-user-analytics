@@ -1,9 +1,10 @@
+
 import os
 import sys
 import streamlit as st
-from multiapp import MultiApp
 sys.path.insert(0, './dashboard')
 from applications import model, user_engagement, experience_analytics, satisfaction_analysis
+from multiapp import MultiApp
 
 st.set_page_config(page_title="Telecom User Data Visualization", layout="wide")
 
