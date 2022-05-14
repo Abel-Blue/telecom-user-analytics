@@ -9,12 +9,12 @@ def app():
     st.title("User Experience Analysis")
 
     st.header("Data Visualization")
-    df_avgThr = pd.read_csv('../../data/top10avgThroughput.csv')
-    df_rtt = pd.read_csv('../../data/top10rtt.csv')
-    df_tcp = pd.read_csv('../../data/top10tcp.csv')
-    df_frqThr = pd.read_csv('../../data/most_freqAvgThr.csv')
-    df_frqrtt = pd.read_csv('../../data/most_freqRTT.csv')
-    df_frqtcp = pd.read_csv('../../data/most_freqTCP.csv')
+    df_avgThr = pd.read_csv('data/top10avgThroughput.csv')
+    df_rtt = pd.read_csv('data/top10rtt.csv')
+    df_tcp = pd.read_csv('data/top10tcp.csv')
+    df_frqThr = pd.read_csv('data/most_freqAvgThr.csv')
+    df_frqrtt = pd.read_csv('data/most_freqRTT.csv')
+    df_frqtcp = pd.read_csv('data/most_freqTCP.csv')
 
     st.header("Top 10 Users Experience metrics")
     st.subheader("Average Throughput")
@@ -43,4 +43,4 @@ def app():
     st.bar_chart(df_frqtcp.value_counts())
 
     st.header("Cluster with 2 group classification")
-    st.image('../../data/clusterExp.png')
+    st.image('data/clusterExp.png')

@@ -3,13 +3,12 @@ import streamlit as st
 from joblib import load
 import numpy as np
 import sys
-sys.path.insert(0, '../models')
 
 
 def app():
 
     # Load Saved Results Data
-    model = load(filename='../../models/satisfaction_model.joblib')
+    model = load(filename='models/satisfaction_model.joblib')
 
     st.title("Satisfaction Predictor Model")
 
