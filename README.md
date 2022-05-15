@@ -21,8 +21,8 @@ This project will answer the questions:
 You can run the dashboard using docker:
 
 ```bash
-docker pull abelblue/telecom_image:1.0
-docker run abelblue/telecom_image:1.0
+docker pull abelblue/tele_image:1.0
+docker run abelblue/tele_image:1.0
 ```
 
 ## Installation for linux
