@@ -11,6 +11,9 @@ ENV PYTHONUNBUFFERED=1
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
+# informs Docker that the container listens on the specified network ports at runtime. 
+EXPOSE 8501
+
 WORKDIR /app
 COPY . /app
 
@@ -19,5 +22,8 @@ COPY . /app
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
+# Used to set executables that will always run when the container is initiated
+ENTRYPOINT ["streamlit", "run"]
+
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "app.py"]
+CMD ["app.py"]
