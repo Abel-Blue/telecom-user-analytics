@@ -10,15 +10,13 @@ This project will answer the questions:
 # Screenshots
 
 ![topapps](data/top10apps.png)
-![bestManufacturers](data/3_best_handset_manufacturers.png)
 ![topphones](data/5%20best%20phones%20used%20in%20communication.png)
 ![corellation](data/corellation.png)
-![telecom](data/satisfaction.png)
 
 # Setup
 ## Docker
 
-You can quickly install it using docker:
+You can run the dashboard using docker:
 
 ```bash
 docker pull abelblue/telecom_image:1.0
