@@ -8,7 +8,6 @@ def app():
 
     st.title("User Satisfaction Analysis")
 
-    st.header("Data Visualization")
     df_satisf = pd.read_csv('data/top10_satisfied_customers.csv')
     df_score = pd.read_csv('data/score_table.csv')
 
@@ -22,3 +21,5 @@ def app():
 
     st.header("User Clustering based on both scores")
     st.image('data/satisfaction.png')
+    st.markdown(
+        'By raising the **experience score**, we can improve user satisfaction.')

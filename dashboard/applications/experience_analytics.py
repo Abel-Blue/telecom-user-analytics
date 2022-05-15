@@ -8,7 +8,6 @@ def app():
 
     st.title("User Experience Analysis")
 
-    st.header("Data Visualization")
     df_avgThr = pd.read_csv('data/top10avgThroughput.csv')
     df_rtt = pd.read_csv('data/top10rtt.csv')
     df_tcp = pd.read_csv('data/top10tcp.csv')
@@ -16,7 +15,7 @@ def app():
     df_frqrtt = pd.read_csv('data/most_freqRTT.csv')
     df_frqtcp = pd.read_csv('data/most_freqTCP.csv')
 
-    st.header("Top 10 Users Experience metrics")
+    st.header("Top 10 Users Experience analysis")
     st.subheader("Average Throughput")
     st.dataframe(df_avgThr)
     st.bar_chart(df_avgThr['Average throughput'])
@@ -30,17 +29,17 @@ def app():
     st.bar_chart(df_tcp['Average TCP'])
 
     st.header("Most Frequenct Users")
-    st.subheader('frquent Average Throughput')
+    st.subheader('Frquent Average Throughput')
     st.dataframe(df_frqThr)
     st.bar_chart(df_frqThr['0'])
 
-    st.subheader("frquent Round Trip Time")
+    st.subheader("Frquent Round Trip Time")
     st.dataframe(df_frqrtt)
     st.bar_chart(df_frqrtt['0'])
 
-    st.subheader("frquent TCP")
+    st.subheader("Frquent TCP")
     st.dataframe(df_frqtcp)
     st.bar_chart(df_frqtcp['0'])
 
-    st.header("Cluster with 2 group classification")
+    st.header("Cluster with 3 group classification")
     st.image('data/clusterExp.png')
