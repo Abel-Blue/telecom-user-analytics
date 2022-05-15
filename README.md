@@ -8,9 +8,11 @@ This project will answer the questions:
 * Is there potential for the company to expand?
 
 # Screenshots
-
+### The top three apps utilized by this telecom company's customers
 ![topapps](data/top10apps.png)
+### The top five phones used by this telecom company's customers
 ![topphones](data/5%20best%20phones%20used%20in%20communication.png)
+### Data transfer coordination between several apps
 ![corellation](data/corellation.png)
 
 # Setup
