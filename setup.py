@@ -14,7 +14,7 @@ def finalize_options(self):
 
 
 def run(self):
-    os.system('rm -vrf ./build ./dist ./*.pyc ./*.pyo ./*.pyd ./*.tgz ./*.egg-info `find -type d -name __pycache__`')
+    os.system('rm -vrf ./build ./dist ./*.pyc ./*.pyo ./*.pyd ./*.tgz ./   *.egg-info `find -type d -name __pycache__`')
 
 
 with open('README.md') as readme_file:
@@ -22,7 +22,7 @@ with open('README.md') as readme_file:
 
 with open('requirements.txt') as req:
     req_list = req.readlines()
-    req_list = [sd.replace('\n', ', ') for sd in req_list]
+    req_list = [sd.replace('\n', '') for sd in req_list]
 
 requirements = req_list
 test_requirements = ['pytest>=3']
